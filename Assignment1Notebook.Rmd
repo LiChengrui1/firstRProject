@@ -1,0 +1,73 @@
+---
+title: "Note"
+author: "Chengrui Li"
+date: "2021/12/5"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## R Markdown
+
+R Markdown allows us to both perform and present data analysis in a simple linear format.
+
+
+
+## Including code fragments
+
+We can embed pieces of R code as follows:
+
+```{r building a function and a data frame}
+
+# First we create a simple function
+f <- function(z) {
+  return(5*z^2+z+cos(15*z)+0.3*sin(300*z))
+}
+
+# We randomly generate some x
+x<-runif(100)
+# We set y to be f applied to x
+y<-f(x)
+
+# We then put x and y together in a data frame
+df<-data.frame(x,y)
+
+```
+
+We can also include code with displayed output.
+
+```{r} 
+
+#Display the top 5 rows of df
+head(df, n=5)
+
+```
+
+## Including plots
+
+We can also embed plots. By using `echo = FALSE` we display only the output and not the code.
+
+```{r, echo=FALSE}
+
+# A simple plot
+plot(x,y) 
+
+```
+.
+
+## Knitr
+
+
+By clicking the **Knit** button we generate either an HTML, PDF, and MS Word document (depending upon the selected output) which displays our analysis in a highly readable format. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+
+```{r, include=FALSE} 
+# Setting include=FALSE in this fragment ensures that neither the code nor the output for this particular fragment will be displayed.
+
+plot(x,y)
+
+```
+
