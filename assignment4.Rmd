@@ -1,0 +1,14 @@
+---
+title: "assignment4"
+author: "Chengrui Li"
+date: "2021/12/5"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+$\binom{35}{z} \cdot \left(\frac{3}{10}\right)ˆz \cdot \left(\frac{7}{10}\right)ˆ{35-z}$.
